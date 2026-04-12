@@ -1,0 +1,722 @@
+[
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.989614Z",
+    "sessionId": "session-0"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:36.489614Z",
+    "sessionId": "session-0"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:36.989614Z",
+    "sessionId": "session-0"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:37.989614Z",
+    "sessionId": "session-0"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:38.489614Z",
+    "sessionId": "session-0"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:38.989614Z",
+    "sessionId": "session-0"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:39.989614Z",
+    "sessionId": "session-0"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:40.489614Z",
+    "sessionId": "session-0"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:40.989614Z",
+    "sessionId": "session-0"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:41.989614Z",
+    "sessionId": "session-1"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:42.489614Z",
+    "sessionId": "session-1"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:42.989614Z",
+    "sessionId": "session-1"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:43.989614Z",
+    "sessionId": "session-1"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:44.489614Z",
+    "sessionId": "session-1"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:44.989614Z",
+    "sessionId": "session-1"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:45.989614Z",
+    "sessionId": "session-1"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:46.489614Z",
+    "sessionId": "session-1"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:46.989614Z",
+    "sessionId": "session-1"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:47.989614Z",
+    "sessionId": "session-2"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:48.489614Z",
+    "sessionId": "session-2"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:48.989614Z",
+    "sessionId": "session-2"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:49.989614Z",
+    "sessionId": "session-2"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:50.489614Z",
+    "sessionId": "session-2"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:50.989614Z",
+    "sessionId": "session-2"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:51.989614Z",
+    "sessionId": "session-2"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:52.489614Z",
+    "sessionId": "session-2"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:52.989614Z",
+    "sessionId": "session-2"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:53.989614Z",
+    "sessionId": "session-3"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:54.489614Z",
+    "sessionId": "session-3"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:54.989614Z",
+    "sessionId": "session-3"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:55.989614Z",
+    "sessionId": "session-3"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:56.489614Z",
+    "sessionId": "session-3"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:56.989614Z",
+    "sessionId": "session-3"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:57.989614Z",
+    "sessionId": "session-3"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:33:58.489614Z",
+    "sessionId": "session-3"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:33:58.989614Z",
+    "sessionId": "session-3"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:59.989614Z",
+    "sessionId": "session-4"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:00.489614Z",
+    "sessionId": "session-4"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:00.989614Z",
+    "sessionId": "session-4"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:01.989614Z",
+    "sessionId": "session-4"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:02.489614Z",
+    "sessionId": "session-4"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:02.989614Z",
+    "sessionId": "session-4"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:03.989614Z",
+    "sessionId": "session-4"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:04.489614Z",
+    "sessionId": "session-4"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:04.989614Z",
+    "sessionId": "session-4"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:05.989614Z",
+    "sessionId": "session-5"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:06.489614Z",
+    "sessionId": "session-5"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:06.989614Z",
+    "sessionId": "session-5"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:07.989614Z",
+    "sessionId": "session-5"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:08.489614Z",
+    "sessionId": "session-5"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:08.989614Z",
+    "sessionId": "session-5"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:09.989614Z",
+    "sessionId": "session-5"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:10.489614Z",
+    "sessionId": "session-5"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:10.989614Z",
+    "sessionId": "session-5"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:11.989614Z",
+    "sessionId": "session-6"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:12.489614Z",
+    "sessionId": "session-6"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:12.989614Z",
+    "sessionId": "session-6"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:13.989614Z",
+    "sessionId": "session-6"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:14.489614Z",
+    "sessionId": "session-6"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:14.989614Z",
+    "sessionId": "session-6"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:15.989614Z",
+    "sessionId": "session-6"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:16.489614Z",
+    "sessionId": "session-6"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:16.989614Z",
+    "sessionId": "session-6"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:17.989614Z",
+    "sessionId": "session-7"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:18.489614Z",
+    "sessionId": "session-7"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:18.989614Z",
+    "sessionId": "session-7"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:19.989614Z",
+    "sessionId": "session-7"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:20.489614Z",
+    "sessionId": "session-7"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:20.989614Z",
+    "sessionId": "session-7"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:21.989614Z",
+    "sessionId": "session-7"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:22.489614Z",
+    "sessionId": "session-7"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:22.989614Z",
+    "sessionId": "session-7"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:23.989614Z",
+    "sessionId": "session-8"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:24.489614Z",
+    "sessionId": "session-8"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:24.989614Z",
+    "sessionId": "session-8"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:25.989614Z",
+    "sessionId": "session-8"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:26.489614Z",
+    "sessionId": "session-8"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:26.989614Z",
+    "sessionId": "session-8"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:27.989614Z",
+    "sessionId": "session-8"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:28.489614Z",
+    "sessionId": "session-8"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:28.989614Z",
+    "sessionId": "session-8"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:29.989614Z",
+    "sessionId": "session-9"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:30.489614Z",
+    "sessionId": "session-9"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:30.989614Z",
+    "sessionId": "session-9"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:31.989614Z",
+    "sessionId": "session-9"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:32.489614Z",
+    "sessionId": "session-9"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:32.989614Z",
+    "sessionId": "session-9"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:34:33.989614Z",
+    "sessionId": "session-9"
+  },
+  {
+    "eventName": "dynamodb:PutItem",
+    "requestParameters": {
+      "tableName": "my-table"
+    },
+    "eventTime": "2026-04-12T01:34:34.489614Z",
+    "sessionId": "session-9"
+  },
+  {
+    "eventName": "logs:PutLogEvents",
+    "requestParameters": {
+      "logGroupName": "/aws/lambda/myfunc"
+    },
+    "eventTime": "2026-04-12T01:34:34.989614Z",
+    "sessionId": "session-9"
+  }
+]

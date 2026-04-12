@@ -1,0 +1,282 @@
+[
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-0"
+  },
+  {
+    "eventName": "s3:DeleteBucket",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-0"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-1"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-1"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-2"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-2"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-3"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-3"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-4"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-4"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-5"
+  },
+  {
+    "eventName": "dynamodb:DeleteTable",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-5"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-6"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-6"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-7"
+  },
+  {
+    "eventName": "dynamodb:DeleteTable",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-7"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-8"
+  },
+  {
+    "eventName": "s3:DeleteBucket",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-8"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-9"
+  },
+  {
+    "eventName": "dynamodb:DeleteTable",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-9"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-10"
+  },
+  {
+    "eventName": "dynamodb:DeleteTable",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-10"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-11"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-11"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-12"
+  },
+  {
+    "eventName": "s3:DeleteBucket",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-12"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-13"
+  },
+  {
+    "eventName": "s3:DeleteBucket",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-13"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-14"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-14"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-15"
+  },
+  {
+    "eventName": "dynamodb:DeleteTable",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-15"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-16"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-16"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-17"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-17"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-18"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-18"
+  },
+  {
+    "eventName": "s3:GetObject",
+    "requestParameters": {
+      "bucketName": "my-app-bucket"
+    },
+    "eventTime": "2026-04-12T01:33:35.991318Z",
+    "sessionId": "attacker-19"
+  },
+  {
+    "eventName": "iam:CreateUser",
+    "requestParameters": {},
+    "eventTime": "2026-04-12T01:33:36.991318Z",
+    "sessionId": "attacker-19"
+  }
+]

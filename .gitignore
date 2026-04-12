@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+results/*.txt
+results/*.md
+results/!paper_results_draft.md

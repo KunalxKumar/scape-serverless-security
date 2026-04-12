@@ -1,0 +1,78 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AWSService",
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventTime": "2026-04-12T07:55:04Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "resource-explorer-2.amazonaws.com",
+      "userAgent": "resource-explorer-2.amazonaws.com",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::630609837381:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+        "roleSessionName": "resource-explorer-2"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIAZFU2GPVC4HKXJHOV",
+          "expiration": "Apr 12, 2026, 8:55:04 AM"
+        },
+        "assumedRoleUser": {
+          "assumedRoleId": "AROAZFU2GPVCREXEFMNTS:resource-explorer-2",
+          "arn": "arn:aws:sts::630609837381:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2"
+        }
+      },
+      "eventType": "AwsApiCall"
+    },
+    {
+      "eventVersion": "1.09",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventName": "ListResiliencyPolicies",
+      "eventSource": "resiliencehub.amazonaws.com",
+      "eventType": "AwsApiCall"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AWSService",
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventName": "AssumeRole",
+      "eventSource": "sts.amazonaws.com",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::630609837381:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+        "roleSessionName": "resource-explorer-2"
+      },
+      "eventType": "AwsApiCall"
+    },
+    {
+      "eventVersion": "1.09",
+      "eventName": "ListDetectors",
+      "eventSource": "guardduty.amazonaws.com",
+      "eventType": "AwsApiCall"
+    },
+    {
+      "eventVersion": "1.11",
+      "eventName": "AssumeRole",
+      "eventSource": "sts.amazonaws.com",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::630609837381:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+        "roleSessionName": "resource-explorer-2"
+      },
+      "eventType": "AwsApiCall"
+    },
+    {
+      "eventVersion": "1.09",
+      "eventName": "ListSecurityConfigurations",
+      "eventSource": "emr-containers.amazonaws.com",
+      "eventType": "AwsApiCall"
+    }
+  ]
+}
