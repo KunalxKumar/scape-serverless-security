@@ -1,282 +1,636 @@
 [
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-0"
-  },
-  {
-    "eventName": "s3:DeleteBucket",
+    "eventName": "ConsoleLogin",
+    "eventTime": "2026-04-12T03:00:00Z",
+    "sessionId": "stratus-credtheft-001",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-0"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/compromised-dev",
+      "accessKeyId": "AKIA_STOLEN_001"
+    }
   },
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-1"
-  },
-  {
-    "eventName": "iam:CreateUser",
+    "eventName": "GetCallerIdentity",
+    "eventTime": "2026-04-12T03:00:02Z",
+    "sessionId": "stratus-credtheft-001",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-1"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/compromised-dev",
+      "accessKeyId": "AKIA_STOLEN_001"
+    }
   },
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-2"
-  },
-  {
-    "eventName": "iam:CreateUser",
+    "eventName": "ListUsers",
+    "eventTime": "2026-04-12T03:00:05Z",
+    "sessionId": "stratus-credtheft-001",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-2"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/compromised-dev",
+      "accessKeyId": "AKIA_STOLEN_001"
+    }
   },
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-3"
-  },
-  {
-    "eventName": "iam:CreateUser",
+    "eventName": "ListRoles",
+    "eventTime": "2026-04-12T03:00:08Z",
+    "sessionId": "stratus-credtheft-001",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-3"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/compromised-dev",
+      "accessKeyId": "AKIA_STOLEN_001"
+    }
   },
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-4"
-  },
-  {
-    "eventName": "iam:CreateUser",
+    "eventName": "ListPolicies",
+    "eventTime": "2026-04-12T03:00:11Z",
+    "sessionId": "stratus-credtheft-001",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-4"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/compromised-dev",
+      "accessKeyId": "AKIA_STOLEN_001"
+    }
   },
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-5"
-  },
-  {
-    "eventName": "dynamodb:DeleteTable",
+    "eventName": "ListAccessKeys",
+    "eventTime": "2026-04-12T03:00:14Z",
+    "sessionId": "stratus-credtheft-001",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-5"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/compromised-dev",
+      "accessKeyId": "AKIA_STOLEN_001"
+    }
   },
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-6"
-  },
-  {
-    "eventName": "iam:CreateUser",
+    "eventName": "CreateAccessKey",
+    "eventTime": "2026-04-12T03:00:18Z",
+    "sessionId": "stratus-credtheft-001",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-6"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/compromised-dev",
+      "accessKeyId": "AKIA_STOLEN_001"
+    }
   },
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-7"
-  },
-  {
-    "eventName": "dynamodb:DeleteTable",
+    "eventName": "AttachUserPolicy",
+    "eventTime": "2026-04-12T03:00:22Z",
+    "sessionId": "stratus-credtheft-001",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-7"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/compromised-dev",
+      "accessKeyId": "AKIA_STOLEN_001"
+    }
   },
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-8"
-  },
-  {
-    "eventName": "s3:DeleteBucket",
+    "eventName": "PutUserPolicy",
+    "eventTime": "2026-04-12T03:00:25Z",
+    "sessionId": "stratus-credtheft-001",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-8"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/compromised-dev",
+      "accessKeyId": "AKIA_STOLEN_001"
+    }
   },
   {
-    "eventName": "s3:GetObject",
-    "requestParameters": {
-      "bucketName": "my-app-bucket"
-    },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-9"
-  },
-  {
-    "eventName": "dynamodb:DeleteTable",
+    "eventName": "AssumeRole",
+    "eventTime": "2026-04-12T03:01:00Z",
+    "sessionId": "stratus-exfil-002",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-9"
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/ExfilRole/attacker",
+      "accessKeyId": "ASIA_EXFIL_002"
+    }
   },
   {
-    "eventName": "s3:GetObject",
+    "eventName": "ListBuckets",
+    "eventTime": "2026-04-12T03:01:03Z",
+    "sessionId": "stratus-exfil-002",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "bucketName": "production-secrets"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-10"
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/ExfilRole/attacker",
+      "accessKeyId": "ASIA_EXFIL_002"
+    }
   },
   {
-    "eventName": "dynamodb:DeleteTable",
-    "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-10"
-  },
-  {
-    "eventName": "s3:GetObject",
+    "eventName": "GetBucketAcl",
+    "eventTime": "2026-04-12T03:01:06Z",
+    "sessionId": "stratus-exfil-002",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "bucketName": "production-secrets"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-11"
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/ExfilRole/attacker",
+      "accessKeyId": "ASIA_EXFIL_002"
+    }
   },
   {
-    "eventName": "iam:CreateUser",
-    "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-11"
-  },
-  {
-    "eventName": "s3:GetObject",
+    "eventName": "GetBucketVersioning",
+    "eventTime": "2026-04-12T03:01:08Z",
+    "sessionId": "stratus-exfil-002",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "bucketName": "production-secrets"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-12"
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/ExfilRole/attacker",
+      "accessKeyId": "ASIA_EXFIL_002"
+    }
   },
   {
-    "eventName": "s3:DeleteBucket",
-    "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-12"
-  },
-  {
-    "eventName": "s3:GetObject",
+    "eventName": "GetBucketLogging",
+    "eventTime": "2026-04-12T03:01:10Z",
+    "sessionId": "stratus-exfil-002",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "bucketName": "production-secrets"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-13"
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/ExfilRole/attacker",
+      "accessKeyId": "ASIA_EXFIL_002"
+    }
   },
   {
-    "eventName": "s3:DeleteBucket",
-    "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-13"
-  },
-  {
-    "eventName": "s3:GetObject",
+    "eventName": "GetObject",
+    "eventTime": "2026-04-12T03:01:15Z",
+    "sessionId": "stratus-exfil-002",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "bucketName": "production-secrets",
+      "key": "db-credentials.json"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-14"
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/ExfilRole/attacker",
+      "accessKeyId": "ASIA_EXFIL_002"
+    }
   },
   {
-    "eventName": "iam:CreateUser",
-    "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-14"
-  },
-  {
-    "eventName": "s3:GetObject",
+    "eventName": "GetObject",
+    "eventTime": "2026-04-12T03:01:16Z",
+    "sessionId": "stratus-exfil-002",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "bucketName": "production-secrets",
+      "key": "aws-keys.csv"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-15"
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/ExfilRole/attacker",
+      "accessKeyId": "ASIA_EXFIL_002"
+    }
   },
   {
-    "eventName": "dynamodb:DeleteTable",
-    "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-15"
-  },
-  {
-    "eventName": "s3:GetObject",
+    "eventName": "GetObject",
+    "eventTime": "2026-04-12T03:01:17Z",
+    "sessionId": "stratus-exfil-002",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "bucketName": "production-secrets",
+      "key": "customer-data.tar.gz"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-16"
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/ExfilRole/attacker",
+      "accessKeyId": "ASIA_EXFIL_002"
+    }
   },
   {
-    "eventName": "iam:CreateUser",
+    "eventName": "AssumeRole",
+    "eventTime": "2026-04-12T03:02:00Z",
+    "sessionId": "stratus-persist-003",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-16"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "accessKeyId": "AKIA_PERSIST_003"
+    }
   },
   {
-    "eventName": "s3:GetObject",
+    "eventName": "ListUsers",
+    "eventTime": "2026-04-12T03:02:03Z",
+    "sessionId": "stratus-persist-003",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "accessKeyId": "AKIA_PERSIST_003"
+    }
+  },
+  {
+    "eventName": "CreateAccessKey",
+    "eventTime": "2026-04-12T03:02:06Z",
+    "sessionId": "stratus-persist-003",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "userName": "service-account-1"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-17"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "accessKeyId": "AKIA_PERSIST_003"
+    }
   },
   {
-    "eventName": "iam:CreateUser",
-    "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-17"
-  },
-  {
-    "eventName": "s3:GetObject",
+    "eventName": "CreateAccessKey",
+    "eventTime": "2026-04-12T03:02:09Z",
+    "sessionId": "stratus-persist-003",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "userName": "service-account-2"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-18"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "accessKeyId": "AKIA_PERSIST_003"
+    }
   },
   {
-    "eventName": "iam:CreateUser",
-    "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-18"
-  },
-  {
-    "eventName": "s3:GetObject",
+    "eventName": "CreateAccessKey",
+    "eventTime": "2026-04-12T03:02:12Z",
+    "sessionId": "stratus-persist-003",
     "requestParameters": {
-      "bucketName": "my-app-bucket"
+      "userName": "deploy-bot"
     },
-    "eventTime": "2026-04-12T01:33:35.991318Z",
-    "sessionId": "attacker-19"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "accessKeyId": "AKIA_PERSIST_003"
+    }
   },
   {
-    "eventName": "iam:CreateUser",
+    "eventName": "CreateLoginProfile",
+    "eventTime": "2026-04-12T03:02:15Z",
+    "sessionId": "stratus-persist-003",
+    "requestParameters": {
+      "userName": "backdoor-user"
+    },
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "accessKeyId": "AKIA_PERSIST_003"
+    }
+  },
+  {
+    "eventName": "DescribeInstances",
+    "eventTime": "2026-04-12T03:03:00Z",
+    "sessionId": "stratus-recon-004",
     "requestParameters": {},
-    "eventTime": "2026-04-12T01:33:36.991318Z",
-    "sessionId": "attacker-19"
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeSecurityGroups",
+    "eventTime": "2026-04-12T03:03:02Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeSubnets",
+    "eventTime": "2026-04-12T03:03:04Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeVpcs",
+    "eventTime": "2026-04-12T03:03:06Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeVolumes",
+    "eventTime": "2026-04-12T03:03:08Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeSnapshots",
+    "eventTime": "2026-04-12T03:03:10Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeAddresses",
+    "eventTime": "2026-04-12T03:03:12Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeKeyPairs",
+    "eventTime": "2026-04-12T03:03:14Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeImages",
+    "eventTime": "2026-04-12T03:03:16Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeLoadBalancers",
+    "eventTime": "2026-04-12T03:03:18Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeAlarms",
+    "eventTime": "2026-04-12T03:03:20Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "ListBuckets",
+    "eventTime": "2026-04-12T03:03:22Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeNetworkInterfaces",
+    "eventTime": "2026-04-12T03:03:24Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeHosts",
+    "eventTime": "2026-04-12T03:03:26Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribePlacementGroups",
+    "eventTime": "2026-04-12T03:03:28Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "DescribeDirectories",
+    "eventTime": "2026-04-12T03:03:30Z",
+    "sessionId": "stratus-recon-004",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/recon-actor",
+      "accessKeyId": "AKIA_RECON_004"
+    }
+  },
+  {
+    "eventName": "AssumeRole",
+    "eventTime": "2026-04-12T03:04:00Z",
+    "sessionId": "stratus-evasion-005",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/attacker",
+      "accessKeyId": "AKIA_EVASION_005"
+    }
+  },
+  {
+    "eventName": "DescribeTrails",
+    "eventTime": "2026-04-12T03:04:03Z",
+    "sessionId": "stratus-evasion-005",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/attacker",
+      "accessKeyId": "AKIA_EVASION_005"
+    }
+  },
+  {
+    "eventName": "StopLogging",
+    "eventTime": "2026-04-12T03:04:06Z",
+    "sessionId": "stratus-evasion-005",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/attacker",
+      "accessKeyId": "AKIA_EVASION_005"
+    }
+  },
+  {
+    "eventName": "DeleteTrail",
+    "eventTime": "2026-04-12T03:04:09Z",
+    "sessionId": "stratus-evasion-005",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/attacker",
+      "accessKeyId": "AKIA_EVASION_005"
+    }
+  },
+  {
+    "eventName": "PutEventSelectors",
+    "eventTime": "2026-04-12T03:04:12Z",
+    "sessionId": "stratus-evasion-005",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/attacker",
+      "accessKeyId": "AKIA_EVASION_005"
+    }
+  },
+  {
+    "eventName": "AssumeRole",
+    "eventTime": "2026-04-12T03:05:00Z",
+    "sessionId": "stratus-lateral-006",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::111111111111:role/CrossAccountRole"
+    }
+  },
+  {
+    "eventName": "AssumeRole",
+    "eventTime": "2026-04-12T03:05:03Z",
+    "sessionId": "stratus-lateral-006",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::222222222222:role/TargetRole"
+    }
+  },
+  {
+    "eventName": "AssumeRole",
+    "eventTime": "2026-04-12T03:05:06Z",
+    "sessionId": "stratus-lateral-006",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::333333333333:role/FinalTarget"
+    }
+  },
+  {
+    "eventName": "ListBuckets",
+    "eventTime": "2026-04-12T03:05:10Z",
+    "sessionId": "stratus-lateral-006",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::333333333333:role/FinalTarget"
+    }
+  },
+  {
+    "eventName": "GetObject",
+    "eventTime": "2026-04-12T03:05:12Z",
+    "sessionId": "stratus-lateral-006",
+    "requestParameters": {
+      "bucketName": "target-data"
+    },
+    "userIdentity": {
+      "arn": "arn:aws:iam::333333333333:role/FinalTarget"
+    }
+  },
+  {
+    "eventName": "AssumeRole",
+    "eventTime": "2026-04-12T03:06:00Z",
+    "sessionId": "stratus-lambda-007",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/lambda-attacker",
+      "accessKeyId": "AKIA_LAMBDA_007"
+    }
+  },
+  {
+    "eventName": "ListFunctions20150331",
+    "eventTime": "2026-04-12T03:06:03Z",
+    "sessionId": "stratus-lambda-007",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/lambda-attacker",
+      "accessKeyId": "AKIA_LAMBDA_007"
+    }
+  },
+  {
+    "eventName": "GetFunction20150331v2",
+    "eventTime": "2026-04-12T03:06:06Z",
+    "sessionId": "stratus-lambda-007",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/lambda-attacker",
+      "accessKeyId": "AKIA_LAMBDA_007"
+    }
+  },
+  {
+    "eventName": "UpdateFunctionCode20150331v2",
+    "eventTime": "2026-04-12T03:06:10Z",
+    "sessionId": "stratus-lambda-007",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/lambda-attacker",
+      "accessKeyId": "AKIA_LAMBDA_007"
+    }
+  },
+  {
+    "eventName": "UpdateFunctionConfiguration20150331v2",
+    "eventTime": "2026-04-12T03:06:14Z",
+    "sessionId": "stratus-lambda-007",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/lambda-attacker",
+      "accessKeyId": "AKIA_LAMBDA_007"
+    }
+  },
+  {
+    "eventName": "AddPermission20150331v2",
+    "eventTime": "2026-04-12T03:06:18Z",
+    "sessionId": "stratus-lambda-007",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/lambda-attacker",
+      "accessKeyId": "AKIA_LAMBDA_007"
+    }
+  },
+  {
+    "eventName": "CreateEventSourceMapping20150331",
+    "eventTime": "2026-04-12T03:06:22Z",
+    "sessionId": "stratus-lambda-007",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:iam::123456789012:user/lambda-attacker",
+      "accessKeyId": "AKIA_LAMBDA_007"
+    }
+  },
+  {
+    "eventName": "DescribeInstances",
+    "eventTime": "2026-04-12T03:07:00Z",
+    "sessionId": "stratus-ssrf-008",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/EC2InstanceRole/i-0123456789",
+      "accessKeyId": "ASIA_SSRF_008"
+    }
+  },
+  {
+    "eventName": "DescribeSecurityGroups",
+    "eventTime": "2026-04-12T03:07:03Z",
+    "sessionId": "stratus-ssrf-008",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/EC2InstanceRole/i-0123456789",
+      "accessKeyId": "ASIA_SSRF_008"
+    }
+  },
+  {
+    "eventName": "ListUsers",
+    "eventTime": "2026-04-12T03:07:08Z",
+    "sessionId": "stratus-ssrf-008",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/EC2InstanceRole/i-0123456789",
+      "accessKeyId": "ASIA_SSRF_008"
+    }
+  },
+  {
+    "eventName": "ListRoles",
+    "eventTime": "2026-04-12T03:07:11Z",
+    "sessionId": "stratus-ssrf-008",
+    "requestParameters": {},
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/EC2InstanceRole/i-0123456789",
+      "accessKeyId": "ASIA_SSRF_008"
+    }
+  },
+  {
+    "eventName": "CreateAccessKey",
+    "eventTime": "2026-04-12T03:07:16Z",
+    "sessionId": "stratus-ssrf-008",
+    "requestParameters": {
+      "userName": "ec2-backdoor"
+    },
+    "userIdentity": {
+      "arn": "arn:aws:sts::123456789012:assumed-role/EC2InstanceRole/i-0123456789",
+      "accessKeyId": "ASIA_SSRF_008"
+    }
   }
 ]

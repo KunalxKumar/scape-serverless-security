@@ -1,0 +1,160 @@
+{
+  "version": "3.0",
+  "alpha": 0.01,
+  "tau": 0.01,
+  "violation_threshold": 0.2,
+  "weights": [
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666
+  ],
+  "seen_sessions": [
+    "session-0",
+    "session-1",
+    "session-10",
+    "session-11",
+    "session-12",
+    "session-13",
+    "session-14",
+    "session-15",
+    "session-16",
+    "session-17",
+    "session-18",
+    "session-19",
+    "session-2",
+    "session-20",
+    "session-21",
+    "session-22",
+    "session-23",
+    "session-24",
+    "session-25",
+    "session-26",
+    "session-27",
+    "session-28",
+    "session-29",
+    "session-3",
+    "session-30",
+    "session-31",
+    "session-32",
+    "session-33",
+    "session-4",
+    "session-5",
+    "session-6",
+    "session-7",
+    "session-8",
+    "session-9"
+  ],
+  "allowed_transitions": {
+    "s3:GetObject": [
+      "dynamodb:PutItem"
+    ],
+    "dynamodb:PutItem": [
+      "logs:PutLogEvents"
+    ],
+    "logs:PutLogEvents": [
+      "s3:GetObject"
+    ]
+  },
+  "allowed_resources": {
+    "s3:GetObject": [
+      "arn:aws:s3:::my-app-bucket"
+    ],
+    "dynamodb:PutItem": [
+      "arn:aws:dynamodb:us-east-1:000000000000:table/my-table"
+    ],
+    "logs:PutLogEvents": [
+      "arn:aws:logs:us-east-1:000000000000:log-group:/aws/lambda/myfunc"
+    ]
+  },
+  "resource_sets": {
+    "s3:GetObject": [
+      "arn:aws:s3:::my-app-bucket"
+    ],
+    "dynamodb:PutItem": [
+      "arn:aws:dynamodb:us-east-1:000000000000:table/my-table"
+    ],
+    "logs:PutLogEvents": [
+      "arn:aws:logs:us-east-1:000000000000:log-group:/aws/lambda/myfunc"
+    ]
+  },
+  "transition_counts": {
+    "s3:GetObject|dynamodb:PutItem": 100,
+    "dynamodb:PutItem|logs:PutLogEvents": 100,
+    "logs:PutLogEvents|s3:GetObject": 66
+  },
+  "resource_counts": {
+    "s3:GetObject|arn:aws:s3:::my-app-bucket": 100,
+    "dynamodb:PutItem|arn:aws:dynamodb:us-east-1:000000000000:table/my-table": 100,
+    "logs:PutLogEvents|arn:aws:logs:us-east-1:000000000000:log-group:/aws/lambda/myfunc": 100
+  },
+  "action_counts": {
+    "s3:GetObject": 100,
+    "dynamodb:PutItem": 100,
+    "logs:PutLogEvents": 66
+  },
+  "unigram_counts": {
+    "s3:GetObject": 100,
+    "dynamodb:PutItem": 100,
+    "logs:PutLogEvents": 100
+  },
+  "total_events": 300,
+  "action_vocabulary": [
+    "dynamodb:PutItem",
+    "logs:PutLogEvents",
+    "s3:GetObject"
+  ],
+  "global_action_counts": {
+    "s3:GetObject": 100,
+    "dynamodb:PutItem": 100,
+    "logs:PutLogEvents": 100
+  },
+  "total_global_events": 300,
+  "valid_entry_actions": [
+    "s3:GetObject"
+  ],
+  "known_session_prefixes": [
+    "session"
+  ],
+  "timing_stats": {
+    "dynamodb:PutItem": [
+      0.5,
+      0.0
+    ],
+    "logs:PutLogEvents": [
+      0.5,
+      0.0
+    ],
+    "s3:GetObject": [
+      1.0,
+      0.0
+    ]
+  },
+  "data_flow_stats": {},
+  "data_flow_coverage": {},
+  "action_sensitivity": {
+    "s3:GetObject": 1.0,
+    "dynamodb:PutItem": 1.0,
+    "logs:PutLogEvents": 0.5,
+    "s3:DeleteBucket": 10.0,
+    "iam:CreateUser": 10.0,
+    "s3:PutObject": 1.5,
+    "dynamodb:DeleteTable": 8.0,
+    "lambda:UpdateFunctionCode": 9.0,
+    "lambda:AddPermission": 9.0,
+    "iam:AttachRolePolicy": 10.0,
+    "iam:PutRolePolicy": 10.0,
+    "AssumeRole": 0.3,
+    "sts:AssumeRole": 0.3,
+    "sts:GetCallerIdentity": 0.2,
+    "sts:GetSessionToken": 0.3
+  },
+  "threshold_alert": 2.0,
+  "threshold_restrict": 6.25,
+  "threshold_block": 12.5,
+  "rarity_threshold": 0.0001,
+  "c4_thresholds": {},
+  "c5_thresholds": {}
+}

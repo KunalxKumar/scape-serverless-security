@@ -1,0 +1,522 @@
+{
+  "metadata": {
+    "model": "models/full_pipeline_engine.json",
+    "tau": 0.66,
+    "training_sources": {
+      "normal_traffic": 300,
+      "test_normal": 90,
+      "my_cloudtrail_raw": 2062,
+      "my_cloudtrail_scape": 2020
+    },
+    "testing_sources": {
+      "test_anomalous": 61,
+      "attack_logs": 5,
+      "real_logs": 6,
+      "flaws_sample": "SKIPPED"
+    }
+  },
+  "training": {
+    "total_events": 4472,
+    "vocabulary_size": 511,
+    "unique_sessions": 41,
+    "transition_pairs": 1663
+  },
+  "normal_test": {
+    "total_events": 4472,
+    "false_positives": 2735,
+    "fpr_percent": 61.1583,
+    "avg_phi": 0.293609
+  },
+  "attack_test": {
+    "total_events": 72,
+    "true_positives": 70,
+    "tpr_percent": 97.2222,
+    "avg_phi": 0.083515
+  },
+  "phi_distribution": {
+    "0.0-0.1": 2796,
+    "0.5-0.6": 5,
+    "0.6-0.7": 200,
+    "0.7-0.8": 775,
+    "0.8-0.9": 768
+  },
+  "top_anomalous_actions": [
+    {
+      "action": "AssumeRole",
+      "count": 8
+    },
+    {
+      "action": "CreateAccessKey",
+      "count": 5
+    },
+    {
+      "action": "GetObject",
+      "count": 5
+    },
+    {
+      "action": "ListBuckets",
+      "count": 4
+    },
+    {
+      "action": "ListUsers",
+      "count": 3
+    },
+    {
+      "action": "GetCallerIdentity",
+      "count": 2
+    },
+    {
+      "action": "ListRoles",
+      "count": 2
+    },
+    {
+      "action": "DescribeInstances",
+      "count": 2
+    },
+    {
+      "action": "DescribeSecurityGroups",
+      "count": 2
+    },
+    {
+      "action": "ConsoleLogin",
+      "count": 1
+    },
+    {
+      "action": "ListPolicies",
+      "count": 1
+    },
+    {
+      "action": "ListAccessKeys",
+      "count": 1
+    },
+    {
+      "action": "AttachUserPolicy",
+      "count": 1
+    },
+    {
+      "action": "PutUserPolicy",
+      "count": 1
+    },
+    {
+      "action": "GetBucketAcl",
+      "count": 1
+    },
+    {
+      "action": "GetBucketVersioning",
+      "count": 1
+    },
+    {
+      "action": "GetBucketLogging",
+      "count": 1
+    },
+    {
+      "action": "CreateLoginProfile",
+      "count": 1
+    },
+    {
+      "action": "DescribeSubnets",
+      "count": 1
+    },
+    {
+      "action": "DescribeVpcs",
+      "count": 1
+    },
+    {
+      "action": "DescribeVolumes",
+      "count": 1
+    },
+    {
+      "action": "DescribeSnapshots",
+      "count": 1
+    },
+    {
+      "action": "DescribeAddresses",
+      "count": 1
+    },
+    {
+      "action": "DescribeKeyPairs",
+      "count": 1
+    },
+    {
+      "action": "DescribeImages",
+      "count": 1
+    },
+    {
+      "action": "DescribeLoadBalancers",
+      "count": 1
+    },
+    {
+      "action": "DescribeAlarms",
+      "count": 1
+    },
+    {
+      "action": "DescribeNetworkInterfaces",
+      "count": 1
+    },
+    {
+      "action": "DescribeHosts",
+      "count": 1
+    },
+    {
+      "action": "DescribePlacementGroups",
+      "count": 1
+    },
+    {
+      "action": "DescribeDirectories",
+      "count": 1
+    },
+    {
+      "action": "DescribeTrails",
+      "count": 1
+    },
+    {
+      "action": "StopLogging",
+      "count": 1
+    },
+    {
+      "action": "DeleteTrail",
+      "count": 1
+    },
+    {
+      "action": "PutEventSelectors",
+      "count": 1
+    },
+    {
+      "action": "ListFunctions20150331",
+      "count": 1
+    },
+    {
+      "action": "GetFunction20150331v2",
+      "count": 1
+    },
+    {
+      "action": "UpdateFunctionCode20150331v2",
+      "count": 1
+    },
+    {
+      "action": "UpdateFunctionConfiguration20150331v2",
+      "count": 1
+    },
+    {
+      "action": "AddPermission20150331v2",
+      "count": 1
+    },
+    {
+      "action": "CreateEventSourceMapping20150331",
+      "count": 1
+    },
+    {
+      "action": "CreateUser",
+      "count": 1
+    },
+    {
+      "action": "UpdateFunctionCode",
+      "count": 1
+    },
+    {
+      "action": "ListResiliencyPolicies",
+      "count": 1
+    },
+    {
+      "action": "ListDetectors",
+      "count": 1
+    },
+    {
+      "action": "ListSecurityConfigurations",
+      "count": 1
+    }
+  ],
+  "violation_breakdown": {
+    "C3": 62,
+    "C0": 61,
+    "C4": 36,
+    "C2": 3
+  },
+  "sample_detections": [
+    {
+      "action": "ConsoleLogin",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:00:00Z"
+    },
+    {
+      "action": "GetCallerIdentity",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:00:02Z"
+    },
+    {
+      "action": "ListUsers",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:00:05Z"
+    },
+    {
+      "action": "ListRoles",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:00:08Z"
+    },
+    {
+      "action": "ListPolicies",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:00:11Z"
+    },
+    {
+      "action": "ListAccessKeys",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:00:14Z"
+    },
+    {
+      "action": "CreateAccessKey",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:00:18Z"
+    },
+    {
+      "action": "AttachUserPolicy",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:00:22Z"
+    },
+    {
+      "action": "PutUserPolicy",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:00:25Z"
+    },
+    {
+      "action": "AssumeRole",
+      "phi": 0.541081,
+      "violations": [
+        "C0",
+        "C4"
+      ],
+      "time": "2026-04-12T03:01:00Z"
+    },
+    {
+      "action": "ListBuckets",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:01:03Z"
+    },
+    {
+      "action": "GetBucketAcl",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:01:06Z"
+    },
+    {
+      "action": "GetBucketVersioning",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:01:08Z"
+    },
+    {
+      "action": "GetBucketLogging",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C2",
+        "C3"
+      ],
+      "time": "2026-04-12T03:01:10Z"
+    },
+    {
+      "action": "GetObject",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:01:15Z"
+    },
+    {
+      "action": "GetObject",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:01:16Z"
+    },
+    {
+      "action": "GetObject",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:01:17Z"
+    },
+    {
+      "action": "AssumeRole",
+      "phi": 0.541081,
+      "violations": [
+        "C0",
+        "C4"
+      ],
+      "time": "2026-04-12T03:02:00Z"
+    },
+    {
+      "action": "ListUsers",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:02:03Z"
+    },
+    {
+      "action": "CreateAccessKey",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:02:06Z"
+    },
+    {
+      "action": "CreateAccessKey",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:02:09Z"
+    },
+    {
+      "action": "CreateAccessKey",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:02:12Z"
+    },
+    {
+      "action": "CreateLoginProfile",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:02:15Z"
+    },
+    {
+      "action": "DescribeInstances",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:03:00Z"
+    },
+    {
+      "action": "DescribeSecurityGroups",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3"
+      ],
+      "time": "2026-04-12T03:03:02Z"
+    },
+    {
+      "action": "DescribeSubnets",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:03:04Z"
+    },
+    {
+      "action": "DescribeVpcs",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:03:06Z"
+    },
+    {
+      "action": "DescribeVolumes",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:03:08Z"
+    },
+    {
+      "action": "DescribeSnapshots",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:03:10Z"
+    },
+    {
+      "action": "DescribeAddresses",
+      "phi": 0.0,
+      "violations": [
+        "C0",
+        "C3",
+        "C4"
+      ],
+      "time": "2026-04-12T03:03:12Z"
+    }
+  ]
+}

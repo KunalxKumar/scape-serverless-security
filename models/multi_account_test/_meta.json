@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "accounts": [
+    "111111111111",
+    "222222222222"
+  ],
+  "cross_account_alert_threshold": 2,
+  "cross_account_block_threshold": 4
+}

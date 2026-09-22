@@ -1,0 +1,300 @@
+{
+  "data_dir": "W:\\paper\\data",
+  "split": "file",
+  "notes": [
+    "SCAPE sets Phi=0 when C2 or C3 is below an internal veto threshold. Training on large CloudTrail exports makes relative frequencies of synthetic actions (e.g. s3:GetObject) small, so C3 can veto and drive many BLOCK decisions unless tau is very low."
+  ],
+  "train_fraction": 0.7,
+  "calibration_benign_events": 800,
+  "calibration_synthetic_attacks": 20,
+  "seed": 42,
+  "files": [
+    {
+      "file": "630609837381_CloudTrail_us-east-1_20260415T0020Z_3Ee6hnVx7bLbpqku (1).json",
+      "events": 1
+    },
+    {
+      "file": "630609837381_CloudTrail_us-east-1_20260415T0020Z_3Ee6hnVx7bLbpqku (2).json",
+      "events": 1
+    },
+    {
+      "file": "630609837381_CloudTrail_us-east-1_20260415T0020Z_3Ee6hnVx7bLbpqku.json",
+      "events": 1
+    },
+    {
+      "file": "630609837381_CloudTrail_us-east-1_20260415T0025Z_ON73KfJE458qBM0d.json",
+      "events": 8
+    },
+    {
+      "file": "630609837381_CloudTrail_us-east-1_20260415T0035Z_45EpxIm7kQoGJvzK.json",
+      "events": 1
+    },
+    {
+      "file": "630609837381_CloudTrail_us-east-1_20260415T0035Z_5sP1Ju6ejisPnJJh.json",
+      "events": 18
+    },
+    {
+      "file": "630609837381_CloudTrail_us-east-1_20260415T0035Z_eQBzy37FM8bjNyCL.json",
+      "events": 2
+    },
+    {
+      "file": "630609837381_CloudTrail_us-east-1_20260415T0050Z_B2i42hfq9Ur3iAO2.json",
+      "events": 37
+    },
+    {
+      "file": "630609837381_CloudTrail_us-east-1_20260415T0050Z_p497PkttbtBoqNWY.json",
+      "events": 3
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1145Z_7xgocspSowgK0Gto.json",
+      "events": 29
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1145Z_s7dpHbl38neqZbm2.json",
+      "events": 51
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1150Z_1vnLavRRp0ek1mP4.json",
+      "events": 2
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1200Z_iLj9fb7yyUG9X4Bf.json",
+      "events": 394
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1200Z_x9kHmzMa7cx6l9wM.json",
+      "events": 132
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1205Z_1dM7GQM67kudSyGD.json",
+      "events": 13
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1205Z_86g9Vok9HiUCgSI7.json",
+      "events": 19
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1205Z_SjF3IkuNXJkoHyar.json",
+      "events": 26
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1205Z_UljXNp9xLp8nsAGc.json",
+      "events": 55
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1205Z_dOIWyEekdNWhkpqY.json",
+      "events": 26
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1205Z_lKy08gyrqqRJyzsn.json",
+      "events": 1
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1205Z_nx9Yx1FyJdBaTqKj.json",
+      "events": 10
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1205Z_zs3JGxETHr59VpkX.json",
+      "events": 196
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1210Z_2ru8PrDKZmsO3yWC.json",
+      "events": 3
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1210Z_6CICdbJQM3beT7n3.json",
+      "events": 246
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1210Z_QY5iPRtGUt0EpVaH.json",
+      "events": 69
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1210Z_RBxlxVrF890sGHGg.json",
+      "events": 20
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1210Z_ZgEBhdXGdLTXGoIe.json",
+      "events": 1
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1210Z_bXGZYqBeCCsqWq1U.json",
+      "events": 6
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1210Z_vj0QE0Tf5ZmzMsCo.json",
+      "events": 149
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1215Z_5f9a6SYejzdNeREZ.json",
+      "events": 31
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1215Z_MifI13MOmOjRfXzJ.json",
+      "events": 59
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1215Z_P0WZuP2zvLW2RcUo.json",
+      "events": 33
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1215Z_YMDRJwtmC82bUwAo.json",
+      "events": 156
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1215Z_YxpR6PTmNBivhnJJ.json",
+      "events": 26
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1215Z_Z8x5aqgtcXn5NEG9.json",
+      "events": 117
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1215Z_dTTFsx4I2m3om5Oy.json",
+      "events": 1
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1215Z_nBsuPO1qSTEVerMD.json",
+      "events": 222
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1220Z_8sBQhbu5YO94UV8p.json",
+      "events": 6
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1220Z_AkYyuTYmKtOUB1Lx.json",
+      "events": 12
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1220Z_WMiHxZgr5Hdd6UDc.json",
+      "events": 13
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1220Z_ovtmbuX3ENJ119uH.json",
+      "events": 56
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1220Z_r7NFD65BgeDMqD23.json",
+      "events": 71
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1220Z_sM25jC0Ku0QcGkDa.json",
+      "events": 10
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1225Z_4iD2boYSOwmb6sWd.json",
+      "events": 12
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1225Z_QqgbBkK0L13H8Wbv.json",
+      "events": 3
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1225Z_RL8g7SsRoNFvvVBW.json",
+      "events": 5
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1225Z_qWyTCPHzELqDMshA.json",
+      "events": 4
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1225Z_vMAR90Iiaqr6M5sR.json",
+      "events": 16
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_04rtp9DpvIpSZzMr.json",
+      "events": 17
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_9JM8uKEITHqwJKXr.json",
+      "events": 22
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_9SJSsrxJ0ChF5VFb.json",
+      "events": 84
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_9dKPuRzdLzqZRjqm.json",
+      "events": 2
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_AvIajGd5rkz6vTy4.json",
+      "events": 63
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_GyyPwrInk2rgv8V0.json",
+      "events": 2
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_KV9LZlfXqBel7nqf.json",
+      "events": 47
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_OU6Ha25B4GGhUIMr.json",
+      "events": 5
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_ZtUNbBkwAu98FPZb.json",
+      "events": 68
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_lHgkh3VeI3XnjZSL.json",
+      "events": 92
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_s2m4APJ8BhmXSIE6.json",
+      "events": 2
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1230Z_soULWstxp7lqsODg.json",
+      "events": 3
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1235Z_Vp7r3boWJKtPb3wM.json",
+      "events": 1
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1235Z_YbVFCP9AYzJDhHV9.json",
+      "events": 185
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1235Z_kboLbHJlz2H6cLyo.json",
+      "events": 4
+    },
+    {
+      "file": "CloudTrail\\218007301253_CloudTrail_us-east-1_20230710T1240Z_C1qUFaqvZS64BcIN.json",
+      "events": 2
+    },
+    {
+      "file": "normal_traffic.json",
+      "events": 300
+    },
+    {
+      "file": "test_anomalous.json",
+      "events": 40
+    },
+    {
+      "file": "test_normal.json",
+      "events": 90
+    }
+  ],
+  "sessions": {
+    "mode": "file",
+    "note": "holdout = test_normal.json"
+  },
+  "events": {
+    "train": 3272,
+    "holdout_benign": 90,
+    "attack_eval": 40
+  },
+  "tau": 0.01,
+  "holdout_benign": {
+    "allow": 0,
+    "block": 90
+  },
+  "attack_eval": {
+    "allow": 0,
+    "block": 40
+  },
+  "model_path": "models/paper_data_engine_e1.json"
+}

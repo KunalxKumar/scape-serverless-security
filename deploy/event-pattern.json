@@ -1,0 +1,4 @@
+{
+  "source": ["aws.s3", "aws.iam", "aws.sts", "aws.lambda", "aws.dynamodb", "aws.ec2", "aws.kms"],
+  "detail-type": ["AWS API Call via CloudTrail"]
+}

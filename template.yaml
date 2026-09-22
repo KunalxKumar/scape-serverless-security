@@ -1,0 +1,390 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  SCAPE - Structural Context-Aware Probabilistic Engine
+  One-click deployment for serverless anomaly detection.
+  See docs/operations.md for configuration and usage.
+
+# ======================================================================
+# Parameters
+# ======================================================================
+Parameters:
+  EnforcementMode:
+    Type: String
+    Description: "active = block anomalies, passive = alert only"
+    Default: "passive"
+    AllowedValues:
+      - active
+      - passive
+
+  AlertEmail:
+    Type: String
+    Description: Email address for SCAPE alert notifications
+    Default: ""
+
+  ModelBucket:
+    Type: String
+    Description: S3 bucket containing the trained SCAPE model JSON
+    Default: ""
+
+  ModelKey:
+    Type: String
+    Description: S3 key of the trained model file
+    Default: "scape-model/my_engine.json"
+
+  ThresholdAlert:
+    Type: Number
+    Description: Anomaly score threshold for ALLOW_WITH_ALERT
+    Default: 2.0
+
+  ThresholdRestrict:
+    Type: Number
+    Description: Anomaly score threshold for TEMPORARY_RESTRICT
+    Default: 6.25
+
+  ThresholdBlock:
+    Type: Number
+    Description: Anomaly score threshold for BLOCK
+    Default: 12.5
+
+  NoiseFilterActions:
+    Type: String
+    Description: Comma-separated list of actions to skip (reduce noise/cost)
+    Default: "GetServiceLastAccessedDetails,GenerateDataKey,Decrypt"
+
+  FlushBatchSize:
+    Type: Number
+    Description: Number of session updates to buffer before DynamoDB flush
+    Default: 100
+
+  FlushInterval:
+    Type: Number
+    Description: Maximum seconds between DynamoDB flushes
+    Default: 10
+
+  SessionTTLHours:
+    Type: Number
+    Description: Hours before session records expire in DynamoDB
+    Default: 1
+
+# ======================================================================
+# Conditions
+# ======================================================================
+Conditions:
+  HasAlertEmail: !Not [!Equals [!Ref AlertEmail, ""]]
+  HasModelBucket: !Not [!Equals [!Ref ModelBucket, ""]]
+
+# ======================================================================
+# Globals
+# ======================================================================
+Globals:
+  Function:
+    Timeout: 15
+    MemorySize: 256
+    Runtime: python3.12
+    Architectures:
+      - x86_64
+
+# ======================================================================
+# Resources
+# ======================================================================
+Resources:
+
+  # ---- S3: CloudTrail Log Storage ----
+  ScapeLogBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "scape-logs-${AWS::AccountId}-${AWS::Region}"
+      LifecycleConfiguration:
+        Rules:
+          - Id: ExpireLogsAfter30Days
+            Status: Enabled
+            ExpirationInDays: 30
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  ScapeLogBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ScapeLogBucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AWSCloudTrailAclCheck
+            Effect: Allow
+            Principal:
+              Service: cloudtrail.amazonaws.com
+            Action: s3:GetBucketAcl
+            Resource: !Sub "arn:aws:s3:::${ScapeLogBucket}"
+          - Sid: AWSCloudTrailWrite
+            Effect: Allow
+            Principal:
+              Service: cloudtrail.amazonaws.com
+            Action: s3:PutObject
+            Resource: !Sub "arn:aws:s3:::${ScapeLogBucket}/AWSLogs/${AWS::AccountId}/*"
+            Condition:
+              StringEquals:
+                s3:x-amz-acl: bucket-owner-full-control
+
+  # ---- CloudTrail ----
+  ScapeCloudTrail:
+    Type: AWS::CloudTrail::Trail
+    DependsOn: ScapeLogBucketPolicy
+    Properties:
+      TrailName: !Sub "${AWS::StackName}-trail"
+      S3BucketName: !Ref ScapeLogBucket
+      IsLogging: true
+      IsMultiRegionTrail: false
+      IncludeGlobalServiceEvents: true
+      EnableLogFileValidation: true
+      EventSelectors:
+        - IncludeManagementEvents: true
+          ReadWriteType: All
+
+  # ---- DynamoDB: Session State (Phase 5.2: on-demand capacity) ----
+  ScapeStateTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub "${AWS::StackName}-state"
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: session_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: session_id
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+
+  # ---- DynamoDB: Whitelist (Phase 4.1) ----
+  ScapeWhitelistTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub "${AWS::StackName}-whitelist"
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: action_resource
+          AttributeType: S
+      KeySchema:
+        - AttributeName: action_resource
+          KeyType: HASH
+
+  # ---- SNS: Alert Topic ----
+  ScapeAlertTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub "${AWS::StackName}-alerts"
+
+  ScapeAlertSubscription:
+    Type: AWS::SNS::Subscription
+    Condition: HasAlertEmail
+    Properties:
+      TopicArn: !Ref ScapeAlertTopic
+      Protocol: email
+      Endpoint: !Ref AlertEmail
+
+  # ---- Lambda: Detector (Phase 5.1) ----
+  ScapeDetectorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-detector"
+      CodeUri: ./src/
+      Handler: scape_detector.lambda_handler
+      MemorySize: 512
+      Timeout: 30
+      Environment:
+        Variables:
+          MODEL_BUCKET: !Ref ModelBucket
+          MODEL_KEY: !Ref ModelKey
+          STATE_TABLE: !Ref ScapeStateTable
+          WHITELIST_TABLE: !Ref ScapeWhitelistTable
+          SHADOW_BUCKET: !Ref ModelBucket
+          SHADOW_KEY: "scape-model/shadow_engine.json"
+          ALERT_TOPIC_ARN: !Ref ScapeAlertTopic
+          ENFORCEMENT_MODE: !Ref EnforcementMode
+          FLUSH_BATCH_SIZE: !Ref FlushBatchSize
+          FLUSH_INTERVAL: !Ref FlushInterval
+          NOISE_FILTER_ACTIONS: !Ref NoiseFilterActions
+          SCAPE_THRESHOLD_ALERT: !Ref ThresholdAlert
+          SCAPE_THRESHOLD_RESTRICT: !Ref ThresholdRestrict
+          SCAPE_THRESHOLD_BLOCK: !Ref ThresholdBlock
+      Policies:
+        - CloudWatchLogsFullAccess
+        - CloudWatchPutMetricPolicy: {}
+        - Statement:
+            - Effect: Allow
+              Action:
+                - dynamodb:GetItem
+                - dynamodb:PutItem
+                - dynamodb:BatchWriteItem
+                - dynamodb:UpdateItem
+                - dynamodb:Scan
+              Resource:
+                - !GetAtt ScapeStateTable.Arn
+                - !GetAtt ScapeWhitelistTable.Arn
+            - Effect: Allow
+              Action:
+                - sns:Publish
+              Resource: !Ref ScapeAlertTopic
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+                - s3:PutObject
+              Resource:
+                - !Sub "arn:aws:s3:::${ModelBucket}/${ModelKey}"
+                - !Sub "arn:aws:s3:::${ModelBucket}/scape-model/shadow_engine.json"
+      Events:
+        CloudTrailEvent:
+          Type: EventBridgeRule
+          Properties:
+            Pattern:
+              source:
+                - aws.s3
+                - aws.dynamodb
+                - aws.lambda
+                - aws.logs
+                - aws.iam
+                - aws.sts
+                - aws.ec2
+                - aws.kms
+              detail-type:
+                - AWS API Call via CloudTrail
+              detail:
+                # Exclude read-only events to reduce cost/noise
+                eventName:
+                  - anything-but:
+                    - prefix: "Describe"
+                    - prefix: "List"
+                    - prefix: "Get"
+                    - "AssumeRole"
+                    - "ConsoleLogin"
+
+  # ---- Lambda: Whitelist Feedback (Phase 4.1) ----
+  ScapeWhitelistFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-whitelist"
+      CodeUri: ./src/
+      Handler: scape_whitelist.lambda_handler
+      Environment:
+        Variables:
+          WHITELIST_TABLE: !Ref ScapeWhitelistTable
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - dynamodb:PutItem
+                - dynamodb:DeleteItem
+                - dynamodb:Scan
+              Resource: !GetAtt ScapeWhitelistTable.Arn
+      Events:
+        WhitelistApi:
+          Type: Api
+          Properties:
+            Path: /whitelist
+            Method: POST
+
+  # ---- CloudWatch Dashboard (Phase 5.3) ----
+  ScapeDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: !Sub "${AWS::StackName}-monitoring"
+      DashboardBody: !Sub |
+        {
+          "widgets": [
+            {
+              "type": "metric",
+              "x": 0, "y": 0, "width": 12, "height": 6,
+              "properties": {
+                "metrics": [
+                  ["SCAPE", "AnomalyScore", {"stat": "Average", "period": 300}],
+                  ["SCAPE", "AnomalyScore", {"stat": "Maximum", "period": 300}],
+                  ["SCAPE", "AnomalyScore", {"stat": "p99", "period": 300}]
+                ],
+                "region": "${AWS::Region}",
+                "title": "Anomaly Score Distribution",
+                "view": "timeSeries"
+              }
+            },
+            {
+              "type": "metric",
+              "x": 12, "y": 0, "width": 12, "height": 6,
+              "properties": {
+                "metrics": [
+                  ["SCAPE", "Decision", "DecisionType", "ALLOW", {"stat": "Sum", "period": 300}],
+                  ["SCAPE", "Decision", "DecisionType", "ALLOW_WITH_ALERT", {"stat": "Sum", "period": 300}],
+                  ["SCAPE", "Decision", "DecisionType", "TEMPORARY_RESTRICT", {"stat": "Sum", "period": 300}],
+                  ["SCAPE", "Decision", "DecisionType", "BLOCK", {"stat": "Sum", "period": 300}]
+                ],
+                "region": "${AWS::Region}",
+                "title": "Decision Distribution",
+                "view": "timeSeries"
+              }
+            },
+            {
+              "type": "metric",
+              "x": 0, "y": 6, "width": 12, "height": 6,
+              "properties": {
+                "metrics": [
+                  ["AWS/Lambda", "Invocations", "FunctionName", "${ScapeDetectorFunction}"],
+                  ["AWS/Lambda", "Errors", "FunctionName", "${ScapeDetectorFunction}"],
+                  ["AWS/Lambda", "Duration", "FunctionName", "${ScapeDetectorFunction}"]
+                ],
+                "period": 300,
+                "stat": "Sum",
+                "region": "${AWS::Region}",
+                "title": "Detector Lambda Metrics"
+              }
+            },
+            {
+              "type": "metric",
+              "x": 12, "y": 6, "width": 12, "height": 6,
+              "properties": {
+                "metrics": [
+                  ["AWS/DynamoDB", "ConsumedReadCapacityUnits", "TableName", "${ScapeStateTable}"],
+                  ["AWS/DynamoDB", "ConsumedWriteCapacityUnits", "TableName", "${ScapeStateTable}"]
+                ],
+                "period": 300,
+                "stat": "Sum",
+                "region": "${AWS::Region}",
+                "title": "DynamoDB Usage"
+              }
+            }
+          ]
+        }
+
+# ======================================================================
+# Outputs
+# ======================================================================
+Outputs:
+  DetectorFunctionName:
+    Description: SCAPE detector Lambda function
+    Value: !Ref ScapeDetectorFunction
+
+  DetectorFunctionArn:
+    Description: SCAPE detector Lambda ARN
+    Value: !GetAtt ScapeDetectorFunction.Arn
+
+  AlertTopicArn:
+    Description: SNS topic for SCAPE alerts
+    Value: !Ref ScapeAlertTopic
+
+  StateTableName:
+    Description: DynamoDB table for session state
+    Value: !Ref ScapeStateTable
+
+  WhitelistTableName:
+    Description: DynamoDB table for whitelist
+    Value: !Ref ScapeWhitelistTable
+
+  DashboardUrl:
+    Description: CloudWatch dashboard URL
+    Value: !Sub "https://${AWS::Region}.console.aws.amazon.com/cloudwatch/home?region=${AWS::Region}#dashboards:name=${AWS::StackName}-monitoring"
+
+  WhitelistApiEndpoint:
+    Description: API endpoint for whitelist management
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/whitelist"

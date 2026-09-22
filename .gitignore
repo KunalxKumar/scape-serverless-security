@@ -3,6 +3,27 @@ __pycache__/
 *.pyo
 venv/
 .env
+.coverage
+.pytest_cache/
+*.jsonl
+
+# Ignore massive raw datasets / logs
+data/logs/flaws/
+data/logs/flaws_sample.json
+data/logs/my_cloudtrail_raw.json
+data/logs/my_cloudtrail_scape.json
+data/logs/phi_log.jsonl
+
+# Keep small fixtures in data/
+!data/normal_traffic.json
+!data/test_anomalous.json
+!data/test_normal.json
+!data/logs/attack_logs.json
+!data/logs/real_logs.json
+
+# Results text logs (keep markdown, json, png)
 results/*.txt
-results/*.md
-results/!paper_results_draft.md
+!results/*.md
+!results/*.json
+!results/*.png
+*.zip

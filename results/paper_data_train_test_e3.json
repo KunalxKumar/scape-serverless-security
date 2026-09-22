@@ -1,0 +1,57 @@
+{
+  "data_dir": "W:\\paper\\data",
+  "split": "file",
+  "domain": "synthetic",
+  "notes": [
+    "Mixed domains can skew C3. Compare all/cloudtrail/synthetic runs to validate distribution sensitivity and mitigation behavior."
+  ],
+  "train_fraction": 0.7,
+  "calibration_benign_events": 300,
+  "calibration_synthetic_attacks": 20,
+  "seed": 42,
+  "files": [
+    {
+      "file": "normal_traffic.json",
+      "events": 300
+    },
+    {
+      "file": "test_anomalous.json",
+      "events": 40
+    },
+    {
+      "file": "test_normal.json",
+      "events": 90
+    }
+  ],
+  "sessions": {
+    "mode": "file",
+    "note": "holdout = test_normal.json"
+  },
+  "events": {
+    "train": 300,
+    "holdout_benign": 90,
+    "attack_eval": 40
+  },
+  "tau": 0.06,
+  "holdout_benign": {
+    "allow": 90,
+    "block": 0
+  },
+  "attack_eval": {
+    "allow": 20,
+    "block": 20
+  },
+  "confusion_matrix": {
+    "tp": 20,
+    "fp": 0,
+    "fn": 20,
+    "tn": 90
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6666666666666666,
+    "accuracy": 0.8461538461538461
+  },
+  "model_path": "models/paper_data_engine_e3.json"
+}

@@ -1,0 +1,1960 @@
+{
+  "metadata": {
+    "model": "models/flaws_engine.json",
+    "tau": 0.01,
+    "dataset": "flAWS CloudTrail (Kaggle)",
+    "total_events": 1939207,
+    "elapsed_seconds": 21.13
+  },
+  "summary": {
+    "total_events": 1939207,
+    "anomalies_detected": 1939207,
+    "anomaly_percentage": 100.0,
+    "normal_events": 0,
+    "phi_mean": 0.0,
+    "phi_min": 0.0,
+    "phi_max": 0.0
+  },
+  "phi_distribution": {
+    "0.0-0.1": 1939207
+  },
+  "top_anomalous_actions": [
+    {
+      "action": "RunInstances",
+      "count": 1323105
+    },
+    {
+      "action": "DescribeSnapshots",
+      "count": 102510
+    },
+    {
+      "action": "AssumeRole",
+      "count": 79322
+    },
+    {
+      "action": "GetBucketAcl",
+      "count": 42651
+    },
+    {
+      "action": "DescribeInstances",
+      "count": 18935
+    },
+    {
+      "action": "GetCallerIdentity",
+      "count": 17128
+    },
+    {
+      "action": "GetPolicyVersion",
+      "count": 14783
+    },
+    {
+      "action": "ListBuckets",
+      "count": 13362
+    },
+    {
+      "action": "DescribeSpotPriceHistory",
+      "count": 10720
+    },
+    {
+      "action": "DescribeSnapshotAttribute",
+      "count": 9114
+    },
+    {
+      "action": "DescribeVpcs",
+      "count": 7072
+    },
+    {
+      "action": "ListFunctions202224",
+      "count": 6593
+    },
+    {
+      "action": "CreateDefaultVpc",
+      "count": 6431
+    },
+    {
+      "action": "ListEntitiesForPolicy",
+      "count": 6329
+    },
+    {
+      "action": "DescribeSecurityGroups",
+      "count": 5975
+    },
+    {
+      "action": "DescribeLoadBalancers",
+      "count": 5963
+    },
+    {
+      "action": "ListPolicyVersions",
+      "count": 5572
+    },
+    {
+      "action": "GetPolicy",
+      "count": 5402
+    },
+    {
+      "action": "DescribeKeyPairs",
+      "count": 4977
+    },
+    {
+      "action": "CreateKeyPair",
+      "count": 4500
+    },
+    {
+      "action": "ListPolicies",
+      "count": 4450
+    },
+    {
+      "action": "DescribeTrails",
+      "count": 4438
+    },
+    {
+      "action": "GetBucketLocation",
+      "count": 4204
+    },
+    {
+      "action": "CreateLogStream",
+      "count": 4204
+    },
+    {
+      "action": "DescribeVolumes",
+      "count": 3821
+    },
+    {
+      "action": "DescribeReservedInstancesOfferings",
+      "count": 3793
+    },
+    {
+      "action": "DescribeDBInstances",
+      "count": 3524
+    },
+    {
+      "action": "GetUser",
+      "count": 3478
+    },
+    {
+      "action": "GetPolicy202224v2",
+      "count": 3334
+    },
+    {
+      "action": "ListAttachedUserPolicies",
+      "count": 3281
+    },
+    {
+      "action": "DescribeImages",
+      "count": 3021
+    },
+    {
+      "action": "DescribeSubnets",
+      "count": 2963
+    },
+    {
+      "action": "GetBucketPolicy",
+      "count": 2910
+    },
+    {
+      "action": "DescribeFlowLogs",
+      "count": 2880
+    },
+    {
+      "action": "ListTopics",
+      "count": 2817
+    },
+    {
+      "action": "DescribeClusters",
+      "count": 2795
+    },
+    {
+      "action": "DescribeNetworkAcls",
+      "count": 2770
+    },
+    {
+      "action": "GenerateCredentialReport",
+      "count": 2750
+    },
+    {
+      "action": "DescribeNetworkInterfaces",
+      "count": 2710
+    },
+    {
+      "action": "GetBucketLogging",
+      "count": 2689
+    },
+    {
+      "action": "DescribeVpcPeeringConnections",
+      "count": 2649
+    },
+    {
+      "action": "DescribeDBSnapshots",
+      "count": 2627
+    },
+    {
+      "action": "GetBucketVersioning",
+      "count": 2593
+    },
+    {
+      "action": "GetStages",
+      "count": 2559
+    },
+    {
+      "action": "GetBucketNotification",
+      "count": 2536
+    },
+    {
+      "action": "GetBucketLifecycle",
+      "count": 2534
+    },
+    {
+      "action": "GetBucketWebsite",
+      "count": 2397
+    },
+    {
+      "action": "ListClusters",
+      "count": 2375
+    },
+    {
+      "action": "DescribeDBSecurityGroups",
+      "count": 2295
+    },
+    {
+      "action": "DescribeRouteTables",
+      "count": 2234
+    }
+  ],
+  "violation_breakdown": {
+    "C0": 1939207,
+    "C3": 1939207,
+    "C1": 114
+  },
+  "sample_anomalous_sequences": [
+    {
+      "session_id": "arn:aws:iam::811596193553:root",
+      "total_events": 10997,
+      "anomalies": 10997,
+      "sequence": [
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-12T19:57:06Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "GetAccountPasswordPolicy",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T19:59:10Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetAccountSummary",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T19:59:10Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListAccountAliases",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T19:59:10Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListMFADevices",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T19:59:10Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListAccessKeys",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T19:59:10Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListAccessKeys",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T19:59:10Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetAccountPasswordPolicy",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T19:59:10Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetAccountSummary",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T19:59:10Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListAccountAliases",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T19:59:10Z",
+          "source": "iam.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:iam::811596193553:user/backup",
+      "total_events": 915834,
+      "anomalies": 915834,
+      "sequence": [
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-12T21:15:12Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T21:17:05Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T21:19:02Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T21:19:17Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T21:20:40Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T21:21:04Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T21:21:06Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T21:32:05Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T21:53:15Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "DescribeSnapshots",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-12T23:06:45Z",
+          "source": "ec2.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/level6/level6-ec1335a148b902503664e2d162f",
+      "total_events": 3,
+      "anomalies": 3,
+      "sequence": [
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-19T20:14:24Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogGroup",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-19T20:14:24Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-19T20:14:24Z",
+          "source": "logs.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/level6/level6",
+      "total_events": 2,
+      "anomalies": 2,
+      "sequence": [
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-19T20:52:08Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-19T20:56:59Z",
+          "source": "logs.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/level5/level5",
+      "total_events": 10,
+      "anomalies": 10,
+      "sequence": [
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-19T21:00:45Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-19T21:00:45Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogGroup",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-19T21:00:45Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-19T23:27:47Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T01:07:47Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T01:44:39Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T02:27:43Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-21T05:41:11Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-22T16:19:59Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-23T04:09:48Z",
+          "source": "logs.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:iam::811596193553:user/Level5",
+      "total_events": 39,
+      "anomalies": 39,
+      "sequence": [
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-19T23:38:17Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "ListFunctions202224",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-19T23:39:06Z",
+          "source": "lambda.amazonaws.com"
+        },
+        {
+          "action": "GetPolicy202224v2",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-19T23:40:04Z",
+          "source": "lambda.amazonaws.com"
+        },
+        {
+          "action": "ListDistributions",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T00:27:00Z",
+          "source": "cloudfront.amazonaws.com"
+        },
+        {
+          "action": "GetResources",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T01:12:35Z",
+          "source": "apigateway.amazonaws.com"
+        },
+        {
+          "action": "GetPolicy202224v2",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T01:16:21Z",
+          "source": "lambda.amazonaws.com"
+        },
+        {
+          "action": "ListPolicies",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T01:31:25Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListPolicies",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T01:31:25Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListPolicies",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T01:31:25Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListAccessKeys",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-20T01:31:31Z",
+          "source": "iam.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "unknown",
+      "total_events": 59371,
+      "anomalies": 59371,
+      "sequence": [
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-23T04:09:48Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-23T05:08:23Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-23T09:09:55Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-23T19:16:05Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-23T21:18:33Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-23T22:19:35Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-23T23:19:50Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-24T00:20:47Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-24T01:21:25Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-24T02:23:54Z",
+          "source": "sts.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:iam::811596193553:user/Level6",
+      "total_events": 905082,
+      "anomalies": 905082,
+      "sequence": [
+        {
+          "action": "GetUser",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-26T23:13:33Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListAttachedUserPolicies",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-26T23:13:47Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetPolicy",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-26T23:16:48Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetPolicyVersion",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-26T23:17:16Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListFunctions202224",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-26T23:18:48Z",
+          "source": "lambda.amazonaws.com"
+        },
+        {
+          "action": "ListFunctions202224",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-26T23:43:57Z",
+          "source": "lambda.amazonaws.com"
+        },
+        {
+          "action": "ListFunctions202224",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-26T23:50:16Z",
+          "source": "lambda.amazonaws.com"
+        },
+        {
+          "action": "GetPolicy202224v2",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-26T23:50:36Z",
+          "source": "lambda.amazonaws.com"
+        },
+        {
+          "action": "GetPolicy202224v2",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-26T23:50:48Z",
+          "source": "lambda.amazonaws.com"
+        },
+        {
+          "action": "GetStages",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-26T23:51:29Z",
+          "source": "apigateway.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/lambda_basic_execution/Level6",
+      "total_events": 2,
+      "anomalies": 2,
+      "sequence": [
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-27T00:09:31Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T00:10:11Z",
+          "source": "logs.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/Level6/Level6",
+      "total_events": 4190,
+      "anomalies": 4190,
+      "sequence": [
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-27T00:25:39Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T00:25:39Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogGroup",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T00:25:39Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T01:29:08Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T02:11:44Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T06:04:23Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T11:25:40Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T12:12:06Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T13:59:18Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "CreateLogStream",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-27T19:19:05Z",
+          "source": "logs.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/flaws/i-aa2d3b42e5c6e801a",
+      "total_events": 17208,
+      "anomalies": 17208,
+      "sequence": [
+        {
+          "action": "ListUsers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-02-28T02:24:57Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetAccountSummary",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-28T02:24:57Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "DescribeInstanceStatus",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-28T02:24:58Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "DescribeInstances",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-28T02:24:58Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "DescribeImages",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-28T02:24:58Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "DescribeDBSecurityGroups",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-28T02:24:59Z",
+          "source": "rds.amazonaws.com"
+        },
+        {
+          "action": "DescribeDBSnapshots",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-28T02:24:59Z",
+          "source": "rds.amazonaws.com"
+        },
+        {
+          "action": "DescribeDBInstances",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-28T02:24:59Z",
+          "source": "rds.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-28T07:47:17Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-02-28T07:49:05Z",
+          "source": "s3.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:iam::811596193553:user/piper",
+      "total_events": 143,
+      "anomalies": 143,
+      "sequence": [
+        {
+          "action": "GetSessionToken",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-05-16T03:38:22Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "ListBuckets",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-16T03:50:59Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "ConsoleLogin",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-16T23:05:01Z",
+          "source": "signin.amazonaws.com"
+        },
+        {
+          "action": "ListAccountAliases",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-16T23:05:19Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListAccessKeys",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-16T23:05:19Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetAccountPasswordPolicy",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-16T23:05:19Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetAccountSummary",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-16T23:05:19Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetAccountSummary",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-16T23:05:20Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "GetAccountPasswordPolicy",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-16T23:05:20Z",
+          "source": "iam.amazonaws.com"
+        },
+        {
+          "action": "ListAccountAliases",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-16T23:05:20Z",
+          "source": "iam.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "AIDA7ZI0RCYCPBIR0OIC3",
+      "total_events": 4,
+      "anomalies": 4,
+      "sequence": [
+        {
+          "action": "CheckMfa",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-05-16T23:05:01Z",
+          "source": "signin.amazonaws.com"
+        },
+        {
+          "action": "CheckMfa",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-08-11T15:40:03Z",
+          "source": "signin.amazonaws.com"
+        },
+        {
+          "action": "CheckMfa",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-09-17T14:51:15Z",
+          "source": "signin.amazonaws.com"
+        },
+        {
+          "action": "CheckMfa",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2018-02-17T22:10:37Z",
+          "source": "signin.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "AROANXSLA9JG22ZJM5176:cloudsploit-api",
+      "total_events": 3,
+      "anomalies": 3,
+      "sequence": [
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-05-26T18:26:28Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:01Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:30:28Z",
+          "source": "sts.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/Cloudsploit/cloudsploit_scan",
+      "total_events": 568,
+      "anomalies": 568,
+      "sequence": [
+        {
+          "action": "DescribeConfigurationRecorderStatus",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "config.amazonaws.com"
+        },
+        {
+          "action": "DescribeConfigurationRecorders",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "config.amazonaws.com"
+        },
+        {
+          "action": "DescribeTrails",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "cloudtrail.amazonaws.com"
+        },
+        {
+          "action": "DescribeMetricFilters",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "logs.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeInstances",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "DescribeImages",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "DescribeAddresses",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "DescribeFlowLogs",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "DescribeAccountAttributes",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T18:27:02Z",
+          "source": "ec2.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:iam::811596193553:user/SecurityMokey",
+      "total_events": 4522,
+      "anomalies": 4522,
+      "sequence": [
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:09Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:09Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:09Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:09Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:10Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:10Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:10Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:10Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:10Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:25:10Z",
+          "source": "sts.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/SecurityMonkey/secmonkey",
+      "total_events": 12354,
+      "anomalies": 12354,
+      "sequence": [
+        {
+          "action": "GetTrailStatus",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:49Z",
+          "source": "cloudtrail.amazonaws.com"
+        },
+        {
+          "action": "DescribeTrails",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:49Z",
+          "source": "cloudtrail.amazonaws.com"
+        },
+        {
+          "action": "DescribeSnapshots",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:50Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "DescribeTrails",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:50Z",
+          "source": "cloudtrail.amazonaws.com"
+        },
+        {
+          "action": "GetTrailStatus",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:50Z",
+          "source": "cloudtrail.amazonaws.com"
+        },
+        {
+          "action": "GetTrailStatus",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:51Z",
+          "source": "cloudtrail.amazonaws.com"
+        },
+        {
+          "action": "DescribeTrails",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:51Z",
+          "source": "cloudtrail.amazonaws.com"
+        },
+        {
+          "action": "DescribeSnapshots",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:51Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "DescribeSnapshots",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:53Z",
+          "source": "ec2.amazonaws.com"
+        },
+        {
+          "action": "GetTrailStatus",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:26:53Z",
+          "source": "cloudtrail.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/SecurityMonkey/cloudaux",
+      "total_events": 3993,
+      "anomalies": 3993,
+      "sequence": [
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:07Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:08Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:09Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:10Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:11Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:13Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:14Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:15Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:16Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        },
+        {
+          "action": "DescribeLoadBalancers",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-26T22:27:16Z",
+          "source": "elasticloadbalancing.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "AIDAS6VXHZ3PBMIBVP1P2",
+      "total_events": 241,
+      "anomalies": 241,
+      "sequence": [
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-05-29T16:35:11Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T16:40:10Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T17:28:41Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T18:28:18Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T19:28:32Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T20:28:25Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T21:28:24Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T22:28:29Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T23:28:48Z",
+          "source": "sts.amazonaws.com"
+        },
+        {
+          "action": "AssumeRole",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-30T00:28:52Z",
+          "source": "sts.amazonaws.com"
+        }
+      ]
+    },
+    {
+      "session_id": "arn:aws:sts::811596193553:assumed-role/config-role-us-west-2/AWSConfig-BucketCon",
+      "total_events": 3,
+      "anomalies": 3,
+      "sequence": [
+        {
+          "action": "GetBucketAcl",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C1",
+            "C3"
+          ],
+          "time": "2017-05-29T16:35:27Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "GetBucketAcl",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T17:04:28Z",
+          "source": "s3.amazonaws.com"
+        },
+        {
+          "action": "GetBucketAcl",
+          "phi": 0.0,
+          "violations": [
+            "C0",
+            "C3"
+          ],
+          "time": "2017-05-29T23:04:28Z",
+          "source": "s3.amazonaws.com"
+        }
+      ]
+    }
+  ]
+}
